@@ -9,36 +9,35 @@ class WelcomeBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
         child: Container(
-          constraints: const BoxConstraints.expand(),
-          padding: const EdgeInsets.all(20.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      constraints: const BoxConstraints.expand(),
+      padding: const EdgeInsets.all(20.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Row(
             children: <Widget>[
-              Row(
-                children: <Widget>[
-                  Text(
-                    'Hi, $name!',
-                    textAlign: TextAlign.left,
-                    style: const TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.w900,
-                        fontSize: 30.0),
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.only(left: 10.0),
-                    child: Image(
-                      image: AssetImage('images/icons/hand-emoji.png'),
-                    ),
-                  )
-                ],
+              Text(
+                'Hi, $name!',
+                textAlign: TextAlign.left,
+                style: const TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w900,
+                    fontSize: 30.0),
+                overflow: TextOverflow.ellipsis,
               ),
-              CircleAvatar(
-                backgroundImage: AssetImage(avatar),
-              ),
+              const Padding(
+                padding: EdgeInsets.only(left: 10.0),
+                child: Image(
+                  image: AssetImage('images/icons/hand-emoji.png'),
+                ),
+              )
             ],
           ),
-        ),
-        flex: 1);
+          CircleAvatar(
+            backgroundImage: AssetImage(avatar),
+          ),
+        ],
+      ),
+    ));
   }
 }

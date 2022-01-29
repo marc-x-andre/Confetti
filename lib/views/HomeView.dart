@@ -1,22 +1,19 @@
 import 'package:flutter/material.dart';
 import '../widgets/WelcomeBar.dart';
-import '../widgets/task/TaskList.dart';
-import '../widgets/button/MainButton.dart';
+import '../widgets/MainButton.dart';
 
 class HomeView extends StatelessWidget {
+  const HomeView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Column(
-        children: <Widget>[
-          const WelcomeBar(name: 'Jose', avatar: 'images/icons/avatar.png'),
-          TaskList()
+        children: const <Widget>[
+          //   WelcomeBar(name: 'Jose', avatar: 'images/icons/avatar.png'),
+          MainButton()
         ],
       ),
-      decoration: const BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(30.0), topRight: Radius.circular(30.0))),
     );
   }
 }
