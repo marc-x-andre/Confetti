@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'views/HomeView.dart';
 
+ThemeData _baseTheme = ThemeData(
+  fontFamily: "Roboto",
+  canvasColor: Colors.transparent,
+);
+
 void main() => runApp(const ConfettiApp());
 
 class ConfettiApp extends StatelessWidget {
@@ -11,13 +16,12 @@ class ConfettiApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Confetti',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: _baseTheme,
       home: Scaffold(
         body: Container(
-          child:
-              Column(children: <Widget>[Expanded(child: HomeView(), flex: 3)]),
+          child: Column(children: const <Widget>[
+            Expanded(child: HomeView(), flex: 3),
+          ]),
           decoration: const BoxDecoration(
             image: DecorationImage(
                 image: AssetImage('images/background/background.jpg'),
