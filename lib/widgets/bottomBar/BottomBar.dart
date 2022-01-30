@@ -1,14 +1,14 @@
 import 'package:confetti/widgets/EmojiText.dart';
 import 'package:flutter/material.dart';
 
-class Information extends StatefulWidget {
-  const Information({Key? key}) : super(key: key);
+class BottomBar extends StatefulWidget {
+  const BottomBar({Key? key}) : super(key: key);
 
   @override
-  _InformationState createState() => _InformationState();
+  _BottomBarState createState() => _BottomBarState();
 }
 
-class _InformationState extends State<Information> {
+class _BottomBarState extends State<BottomBar> {
   bool isSwitched = false;
 
   @override
@@ -99,7 +99,7 @@ class _InformationState extends State<Information> {
                                 child: Center(
                                   child: ClipOval(
                                     child: Image.asset(
-                                      "images/icons/avatar.png",
+                                      "assets/images/icons/avatar.png",
                                       fit: BoxFit.cover,
                                       height: 36,
                                       width: 36,

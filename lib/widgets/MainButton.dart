@@ -11,7 +11,7 @@ class MainButton extends StatelessWidget {
         onPressed: () {},
         elevation: 30.0,
         fillColor: Colors.white,
-        child: Image.asset('images/icons/party-popper.png'),
+        child: Image.asset('assets/images/icons/party-popper.png'),
         padding: const EdgeInsets.all(40.0),
         shape: const CircleBorder(),
       ),

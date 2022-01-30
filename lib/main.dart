@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'views/HomeView.dart';
 
 ThemeData _baseTheme = ThemeData(
@@ -6,7 +7,12 @@ ThemeData _baseTheme = ThemeData(
   canvasColor: Colors.transparent,
 );
 
-void main() => runApp(const ConfettiApp());
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky).then(
+    (_) => runApp(const ConfettiApp()),
+  );
+}
 
 class ConfettiApp extends StatelessWidget {
   const ConfettiApp({Key? key}) : super(key: key);
@@ -24,7 +30,7 @@ class ConfettiApp extends StatelessWidget {
           ]),
           decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('images/background/background.jpg'),
+                image: AssetImage('assets/images/background/background.jpg'),
                 fit: BoxFit.cover),
           ),
         ),
